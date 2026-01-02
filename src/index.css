@@ -1,0 +1,123 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 215 25% 15%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 215 30% 25%;
+    --secondary: 0 72% 51%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 45 95% 56%;
+    --accent-foreground: 215 25% 15%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 15% 45%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 215 25% 15%;
+    --chart-1: 0 72% 51%;
+    --chart-2: 45 95% 56%;
+    --chart-3: 215 25% 15%;
+    --chart-4: 215 30% 35%;
+    --chart-5: 0 60% 40%;
+    --sidebar-background: 215 25% 15%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 30% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 20% 25%;
+    --sidebar-ring: 0 72% 51%;
+    --shadow-elegant: 0 10px 30px -10px hsl(215 25% 15% / 0.2);
+    --shadow-glow: 0 0 40px hsl(0 72% 51% / 0.15);
+    --gradient-primary: linear-gradient(135deg, hsl(215 25% 15%), hsl(215 30% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 60% 40%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 0 0% 98%;
+    --card: 215 25% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 25% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 0 60% 40%;
+    --secondary: 215 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 45 95% 56%;
+    --accent-foreground: 215 25% 15%;
+    --muted: 215 20% 20%;
+    --muted-foreground: 215 10% 65%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 0 72% 51%;
+    --chart-1: 0 72% 51%;
+    --chart-2: 45 95% 56%;
+    --chart-3: 215 30% 35%;
+    --chart-4: 215 20% 45%;
+    --chart-5: 0 60% 40%;
+    --sidebar-background: 215 25% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 30% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 20% 20%;
+    --sidebar-ring: 0 72% 51%;
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(0 72% 51% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(215 25% 15%), hsl(215 30% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 60% 40%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .comic-card {
+    border-radius: 8px;
+    box-shadow: var(--shadow-elegant);
+    transition: var(--transition-smooth);
+  }
+
+  .comic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-text {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
